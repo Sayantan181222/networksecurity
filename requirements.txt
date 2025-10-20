@@ -1,3 +1,8 @@
 python-dotenv
 pandas
 numpy
+pymongo
+certifi
+
+# this -e . is refering to the setup.py file for making the packages, but in the setup.py the -e . will not be considered
+-e .
