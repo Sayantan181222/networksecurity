@@ -20,8 +20,10 @@ from sklearn.ensemble import (
     GradientBoostingClassifier,
     RandomForestClassifier,
 )
-
 import mlflow
+
+import dagshub
+dagshub.init(repo_owner='sayantanman508', repo_name='networksecurity', mlflow=True)
 
 
 class ModelTrainer:
@@ -127,7 +129,7 @@ class ModelTrainer:
         save_object(self.model_trainer_config.trained_model_file_path,obj=NetworkModel)
 
         # model pusher
-        ## save_object("final_model/model.pkl",best_model)
+        save_object("final_model/model.pkl",best_model)
 
         ## Model Trainer Artifact
         model_trainer_artifact = ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,

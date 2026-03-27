@@ -8,6 +8,10 @@ scikit-learn
 pyaml
 dill
 mlflow
+dagshub
+fastapi
+uvicorn
+python-multipart
 
 # this -e . is refering to the setup.py file for making the packages, but in the setup.py the -e . will not be considered
 # add this at the last before deploying
